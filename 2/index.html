@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>Тестування</h2>
+    <form>
+        <table border="2" style="border-color: silver;">
+            <tr align="center">
+                <td colspan="4">Логічний включаючи або не</td>
+            </tr>
+            <tr align="center">
+                <td rowspan="2">Логічні вирази</td>
+                <td colspan="2">Можливі відповіді</td>
+                <td rowspan="2">Для перевірки<br>прийнятого рішення<br>натисніть</td>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr align="center">
+                <td>0 &and; 0 = </td>
+                <td><input type="radio" name="r1" id="r10" value="1"></td>
+                <td><input type="radio" name="r1" id="r11" value="0"></td>
+                <td><input type="button" value="Перевірка" onclick="check(1);"></td>
+            </tr>
+            <tr align="center">
+                <td>0 &and; 1 = </td>
+                <td><input type="radio" name="r2" id="r21" value="1"></td>
+                <td><input type="radio" name="r2" id="r20" value="0"></td>
+                <td><input type="button" value="Перевірка" onclick="check(2);"></td>
+            </tr>
+            <tr align="center">
+                <td>1 &and; 0 = </td>
+                <td><input type="radio" name="r3" id="r31" value="1"></td>
+                <td><input type="radio" name="r3" id="r30" value="0"></td>
+                <td><input type="button" value="Перевірка" onclick="check(3);"></td>
+            </tr>
+            <tr align="center">
+                <td>1 &and; 1 = </td>
+                <td><input type="radio" name="r4" id="r41" value="1"></td>
+                <td><input type="radio" name="r4" id="r40" value="0"></td>
+                <td><input type="button" value="Перевірка" onclick="check(4);"></td>
+            </tr>
+        </table>
+    </form>
+
+    
+<button class="nazat"><a href="../index.html">Головна</button>
+    <script language="JavaScript">
+        function check(num) {
+            var v = document.querySelector('input[name="r' + num + '"]:checked').getAttribute('value');
+            var res;
+            if (v==0 || v==1) {
+                if (num == 1) {
+                    if (v == (0 && 0)) {
+                        res = true;
+                    } else {
+                        res = false;
+                    }
+                } else if (num == 2) {
+                    if (v == (0 && 1)) {
+                        res = true;
+                    } else {
+                        res = false;
+                    }
+                } else if (num == 3) {
+                    if (v == (1 && 0)) {
+                        res = true;
+                    } else {
+                        res = false;
+                    }
+                } else if (num == 4) {
+                    if (v == (1 && 1)) {
+                        res = true;
+                    } else {
+                        res = false;
+                    }
+                }
+            }
+
+            if (res) {
+                alert("Правильна відповідь");
+            } else {
+                alert("Неправильна відповідь");
+            }
+        }
+    </script>
+</body>
+</html>

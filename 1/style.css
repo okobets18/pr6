@@ -1,0 +1,31 @@
+.colors{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.color{
+    margin-left: 60px;
+}
+
+.blue{
+    color: rgb(1, 1, 125);
+}
+
+.yellow{
+    color: rgb(0, 213, 255);
+}
+
+.black{
+    color:  green;
+}
+
+body{
+    /*background-color: gray;*/
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p{
+    font-size: 40px;
+}
+
